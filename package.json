@@ -1,0 +1,42 @@
+{
+    "name": "gin-quasar-admin",
+    "version": "2.9.0",
+    "description": "A full-featured management system based on Quasar2, Vue3, Go, Gin, Gorm.",
+    "productName": "Gin-Quasar-Admin",
+    "author": "junvary <junvary@foxmail.com>",
+    "private": true,
+    "scripts": {
+        "test": "echo \"No test specified\" && exit 0",
+        "dev": "quasar dev",
+        "build": "quasar build"
+    },
+    "dependencies": {
+        "@quasar/extras": "^1.16.9",
+        "axios": "^0.21.1",
+        "echarts": "^5.4.2",
+        "lottie-web": "^5.11.0",
+        "pinia": "^2.0.11",
+        "quasar": "^2.14.3",
+        "vue": "^3.0.0",
+        "vue-i18n": "^9.0.0",
+        "vue-router": "^4.0.0",
+        "vue3-print-nb": "^0.1.4",
+        "xe-utils": "^3.5.7"
+    },
+    "devDependencies": {
+        "@intlify/vite-plugin-vue-i18n": "^3.3.1",
+        "@junvary/quasar-app-extension-qcascader": "^0.0.7",
+        "@junvary/quasar-app-extension-qstatistic": "^0.1.1",
+        "@quasar/app-vite": "^1.7.3",
+        "@quasar/quasar-app-extension-qiconpicker": "^2.0.7",
+        "autoprefixer": "^10.4.2",
+        "postcss": "^8.4.14",
+        "quasar-app-extension-qhierarchy": "^1.0.9",
+        "unocss": "^0.53.4"
+    },
+    "engines": {
+        "node": "^18 || ^16 || ^14.19",
+        "npm": ">= 6.13.4",
+        "yarn": ">= 1.21.1"
+    }
+}
