@@ -80,7 +80,7 @@ module.exports = configure(function (ctx) {
                     // 测试代理地址
                     ? process.env.API
                     // 正式代理地址
-                    : "http://192.168.2.103:9901/"
+                    : "http://127.0.0.1:9901/"
             },
             // rawDefine: {}
             // ignorePublicFolder: true,
