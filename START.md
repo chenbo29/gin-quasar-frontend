@@ -21,10 +21,14 @@ docker logs -f gin-quasar-frontend-server-1
 ```
 
 ```shell
-bash build_and_load.sh 0.0.3
+bash build_and_load.sh 0.0.4
 ```
 ```shell
 helm upgrade gin-quasar-frontend quasar
+```
+
+```shell
+kubectl port-forward svc/gin-quasar-backend 9901:80
 ```
 
 ```shell
