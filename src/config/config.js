@@ -1,5 +1,5 @@
 // 演示模式开关
-export const DemoMode = true
+export const DemoMode = false
 // 演示模式禁止的API
 export const ForbiddenUrl = [
     'user/edit-user',
@@ -41,6 +41,7 @@ export const AllowList = [
 ]
 // 控制台打印内容
 export const GqaConsoleLogo = () => {
+    console.log(process.env)
     console.info('Welcome to Gin-Quasar-Admin!')
     console.info('Github: https://github.com/Junvary/gin-quasar-admin ')
     console.info('Expecting Your Star!')
