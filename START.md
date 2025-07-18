@@ -26,8 +26,7 @@ bash build_and_load.sh 0.0.3
 helm upgrade gin-quasar-frontend quasar
 ```
 
-
-
 ```shell
 kubectl port-forward --address=0.0.0.0 svc/gin-quasar-frontend 9902:80
+echo http://127.0.0.1:9902
 ```
