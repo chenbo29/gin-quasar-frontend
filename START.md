@@ -2,9 +2,7 @@
 helm install gin-quasar-frontend quasar
 ```
 
-```shell
-docker compose up -d --build --force-recreate
-```
+
 
 ```shell
 #获取访问 Token
@@ -16,13 +14,20 @@ echo http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https
 ```
 
 ```shell
-bash build_and_load.sh 0.0.1
+docker compose up -d --build --force-recreate
 ```
-
+```shell
+docker logs -f gin-quasar-frontend-server-1
+```
+```shell
+bash build_and_load.sh 0.0.3
+```
 ```shell
 helm upgrade gin-quasar-frontend quasar
 ```
 
+
+
 ```shell
-kubectl port-forward svc/gin-quasar-frontend 9001:80
+kubectl port-forward --address=0.0.0.0 svc/gin-quasar-frontend 9902:80
 ```

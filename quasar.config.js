@@ -78,9 +78,9 @@ module.exports = configure(function (ctx) {
             env: {
                 API: ctx.dev
                     // 测试代理地址
-                    ? "http://127.0.0.1:8888/"
+                    ? process.env.API
                     // 正式代理地址
-                    : "http://81.68.159.232:8888/"
+                    : "http://192.168.2.103:9901/"
             },
             // rawDefine: {}
             // ignorePublicFolder: true,

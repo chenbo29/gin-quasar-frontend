@@ -21,3 +21,22 @@ if [ $? -ne 0 ]; then
 else
     echo "镜像已成功加载到kind集群，版本号为$VERSION"
 fi
+
+VALUES_FILE="quasar/values.yaml"
+
+echo "更新配置文件：$VALUES_FILE"
+
+# 检查文件存在性
+if [ ! -f "$VALUES_FILE" ]; then
+  echo "错误：文件 $VALUES_FILE 不存在！"
+  exit 1
+fi
+
+# 替换标签（不创建备份，直接修改）
+# 正则说明：
+# ^\s*tag:\s*  匹配以任意空格开头、紧跟 "tag:" 和任意空格的行
+# .*           匹配任意旧值
+# \1$NEW_TAG   保留前面的空格和 "tag:"，替换旧值为新标签
+sed -i "s/^\(\s*tag:\s*\).*/\1$VERSION/" "$VALUES_FILE"
+
+echo "操作完成：image.tag = $VERSION"
